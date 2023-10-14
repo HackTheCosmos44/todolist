@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+body {
+    box-sizing:border-box;
+    font-family: 'Kanit', sans-serif;
+    background-image: url(images/fond_ecran_zen.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+header {
+    width:100%;
+    font-size:1.5rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+h1 {
+    color:#FFF;
+    text-align:center;
+    margin:2rem 0;
+}
+
+form {
+    min-height:20vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#inputDiv {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.toDoInput{
+    font-family: 'Kanit', sans-serif;
+    width:60%;
+    border-radius:5px 0 0 5px;
+    outline:none;
+    font-size:1rem;
+    padding:1rem;
+}
+
+form input, form button {
+    
+    border:none;
+    background:#fff;
+}
+
+form button {
+    height:100%;
+    padding:.6rem;
+    font-size:2rem;
+    color:#000;
+    cursor:pointer;
+    transition:all .3s ease;
+    border-radius:0 5px 5px 0;
+    
+}
+
+form button:hover {
+    color:#fff;
+    background:#000;
+}
+
+.toDoContainer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.toDoList {
+    list-style:none;
+    min-width:90%;
+    min-height:20vh;
+}
+
+.toDo {
+    margin:.5rem;
+    background:#fff;
+    color:#000;
+    border-radius:5px;
+    font-size:1rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:all .5s ease;
+}
+
+.toDo li {
+    flex:1;
+}
+
+.deleteButton, .checkButton {
+    background:#fff;
+    color:#000;
+    font-size:1.5rem;
+    border:none;
+    padding:1rem;
+    cursor:pointer;
+}
+
+.deleteButton {
+    border-radius: 0 5px 5px 0;
+}
+
+.checkButton {
+    background:lightgreen;
+}
+
+.deleteButton {
+    background:#a03331;
+}
+
+.toDoItem {
+    padding:0 .5rem;
+}
+
+button i {
+    pointer-events:none;    
+}
+
+.checked {
+    text-decoration:line-through;
+    opacity:.5;
+}
+
+.fall {
+    transform : translateY(8rem) rotateZ(20deg);
+    opacity:0;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    outline:none;
+    box-shadow:none;
+    border:none;
+    width:10rem;
+    cursor:pointer;
+    padding:1.05rem;
+    font-size:1rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+.select {
+    margin:1rem;
+    position:relative;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.select::after {
+    content:"\25BC";
+    position:absolute;
+    top:-.3rem;
+    right:0;
+    padding:1rem;
+    pointer-events:none;
+    background:#fff;
+    color:#000;
+    transition:all .3s ease;
+}
+
+.select:hover::after {
+    color:#fff;
+    background:#000;
+}
+
+@media (min-width:768px) {
+    form {
+        flex-direction:row;
+    }
+    
+    .toDoList {
+        min-width:70%;
+    }
+}

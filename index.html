@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        
+        <!--fontawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!--google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Kanit& display=swap" rel="stylesheet">
+        
+        <!--javascript, css-->
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>to do list <i class="fa-solid fa-feather"></i></h1>
+            <form name ="toDoForm">
+                <div id ="inputDiv"/>
+                    <input type="text" name="toDoInput" class ="toDoInput" placeholder ="ajouter une tache..."/>
+                    <button name ="submit" class ="toDoButton" type="submit"><i class="fa-solid fa-square-plus"></i></button>
+                </div>
+                <div name ="select" class ="select">
+                    <select name "toDos" class ="filterToDo">
+                        <option value ="all">Toutes</option>
+                        <option value ="checked">Fait</option>
+                        <option value ="unchecked">&Agrave; faire</option>
+                        
+                    </select>
+                </div>
+            </form>
+            <div class="toDoContainer">
+                <ul class="toDoList"></ul>
+            </div>
+        </header>
+    </body>
+</html>
